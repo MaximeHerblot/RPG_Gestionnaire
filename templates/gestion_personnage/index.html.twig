@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Gestion personnage
+{% endblock %}
+{% block stylesheets %}
+	<link href="/css/gestion_personnage.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+{% include 'listingPersonnage.html.twig'%}
+
+	{# Affichage des personnages #}
+	{# {% for character in list_characters %} #}
+	{# <p>{{character}}</p> #}
+	{# <div class="container-characters">
+				<div class="name-characters">Nom :
+					{{character.Name}}</div>
+				<div class="list-carac">Str :
+					{{character.Strength}}
+					| Dex :
+					{{character.Dexterity}}
+					| Con :
+					{{character.Constitution}}
+					| Int :
+					{{character.Intelligence}}
+					| Wis :
+					{{character.Wisdom}}
+					| Cha :
+					{{character.Charisma}}</div>
+				<div class="remove-characters">
+					<a href=" {{ path('app_remove_character',{'id': character.id}) }}">Remove Characters
+					</a>
+				</div>
+	
+			</div>
+	
+		{% endfor %} #}
+		{% if list_characters is empty %}
+			<a href="{{ path('app_creation_personnage') }}"> <p>Veuillez créer un personnage</p>
+		</a>
+	{% endif %}
+
+	{# {% exit %}k #}
+
+{% endblock %}

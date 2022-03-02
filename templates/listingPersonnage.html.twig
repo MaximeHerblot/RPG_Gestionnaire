@@ -1,0 +1,28 @@
+{% block body %}
+	{% for character in list_characters %}
+        <p>Voici la liste des personnages</p>
+		{# <p>{{character}}</p> #}
+		<div class="container-characters">
+			<div class="name-characters">Nom :
+				{{character.Name}}</div>
+			<div class="list-carac">Str :
+				{{character.Strength}}
+				| Dex :
+				{{character.Dexterity}}
+				| Con :
+				{{character.Constitution}}
+				| Int :
+				{{character.Intelligence}}
+				| Wis :
+				{{character.Wisdom}}
+				| Cha :
+				{{character.Charisma}}</div>
+			<div class="remove-characters">
+				<a href=" {{ path('app_remove_character',{'id': character.id}) }}">Remove Characters
+				</a>
+			</div>
+
+		</div>
+
+	{% endfor %}
+{% endblock %}

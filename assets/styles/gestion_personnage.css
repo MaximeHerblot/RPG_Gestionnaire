@@ -1,0 +1,3 @@
+.container-characters{
+    grid-template-columns: 10px minmax(50%,150px) 20%;
+}

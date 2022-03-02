@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+
+{% if app.user != null %}
+Bienvenue {{app.user.email}}
+{% include 'listingPersonnage.html.twig'%}
+<link href="/css/gestion_personnage.css" rel="stylesheet">
+{% else %}
+Bienvenue sur ce site de RPG
+Si vous voulez créer, modifié vos personnages, <a href="{{path('login')}}"> connecter vous</a>
+{% endif %}
+
+{% endblock %}

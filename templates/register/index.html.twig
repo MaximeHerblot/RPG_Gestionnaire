@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RegisterController!
+{% endblock %}
+
+{% block body %}
+	<form method="POST" action={{ path('app_register_complete') }}>
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password">
+		<input type="submit" value="Création du compte">
+	</form>
+	<a href="{{path('login')}}">Vous avez déjà un compte</a>
+
+{% endblock %}

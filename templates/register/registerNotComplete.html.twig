@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+Le compte {{ username }} n'a pas pu être créé a cause de l'erreur suivante {{ message }}.
+</br>   
+<a href="{{path('app_register')}}">Veuillez reessayer </a>
+
+{% endblock %}
